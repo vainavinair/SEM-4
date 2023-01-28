@@ -1,0 +1,148 @@
+
+practicals> db.secondPrac.find()
+[
+  {
+    _id: ObjectId("63d4ec8e90926348af5d0f70"),
+    name: 'Vainavi Nair',
+    age: 20,
+    gender: 'Female'
+  },
+  {
+    _id: ObjectId("63d4ec9490926348af5d0f71"),
+    name: 'Rishi Gupta',
+    age: 18,
+    gender: 'Male'
+  },
+  {
+    _id: ObjectId("63d4eca090926348af5d0f72"),
+    name: 'Riya Tiwari',
+    age: 24,
+    gender: 'Female'
+  },
+  {
+    _id: ObjectId("63d4eca090926348af5d0f73"),
+    name: 'Mike Morales',
+    age: 25
+  },
+  {
+    _id: ObjectId("63d4eca090926348af5d0f74"),
+    name: 'Rick Mathews',
+    gender: 'Male'
+  }
+]
+
+practicals> db.secondPrac.updateOne({gender:"Male"},{$set:{age:20}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+practicals> db.secondPrac.find()
+[
+  {
+    _id: ObjectId("63d4ec8e90926348af5d0f70"),
+    name: 'Vainavi Nair',
+    age: 20,
+    gender: 'Female'
+  },
+  {
+    _id: ObjectId("63d4ec9490926348af5d0f71"),
+    name: 'Rishi Gupta',
+    age: 20,
+    gender: 'Male'
+  },
+  {
+    _id: ObjectId("63d4eca090926348af5d0f72"),
+    name: 'Riya Tiwari',
+    age: 24,
+    gender: 'Female'
+  },
+  {
+    _id: ObjectId("63d4eca090926348af5d0f73"),
+    name: 'Mike Morales',
+    age: 25
+  },
+  {
+    _id: ObjectId("63d4eca090926348af5d0f74"),
+    name: 'Rick Mathews',
+    gender: 'Male'
+  }
+]
+practicals> db.secondPrac.updateMany({age:20},{$inc:{age:+1}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 2,
+  modifiedCount: 2,
+  upsertedCount: 0
+}
+practicals> db.secondPrac.find()
+[
+  {
+    _id: ObjectId("63d4ec8e90926348af5d0f70"),
+    name: 'Vainavi Nair',
+    age: 21,
+    gender: 'Female'
+  },
+  {
+    _id: ObjectId("63d4ec9490926348af5d0f71"),
+    name: 'Rishi Gupta',
+    age: 21,
+    gender: 'Male'
+  },
+  {
+    _id: ObjectId("63d4eca090926348af5d0f72"),
+    name: 'Riya Tiwari',
+    age: 24,
+    gender: 'Female'
+  },
+  {
+    _id: ObjectId("63d4eca090926348af5d0f73"),
+    name: 'Mike Morales',
+    age: 25
+  },
+  {
+    _id: ObjectId("63d4eca090926348af5d0f74"),
+    name: 'Rick Mathews',
+    gender: 'Male'
+  }
+]
+
+practicals> db.secondPrac.replaceOne({name:"Rick Mathews"},{name:"Rick Perry",age:35,gender:"Male"})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+practicals> db.secondPrac.find()
+[
+  {
+    _id: ObjectId("63d4ec8e90926348af5d0f70"),
+    name: 'Vainavi Nair',
+    age: 21,
+    gender: 'Female'
+  },
+  {
+    _id: ObjectId("63d4ec9490926348af5d0f71"),
+    name: 'Rishi Gupta',
+    age: 21,
+    gender: 'Male'
+  },
+  {
+    _id: ObjectId("63d4eca090926348af5d0f72"),
+    name: 'Riya Tiwari',
+    age: 24,
+    gender: 'Female'
+  },
+  {
+    _id: ObjectId("63d4eca090926348af5d0f73"),
+    name: 'Mike Morales',
+    age: 25
+  },
+  { _id: ObjectId("63d4eca090926348af5d0f74"), name: 'Rick Perry' }
+]
+practicals>

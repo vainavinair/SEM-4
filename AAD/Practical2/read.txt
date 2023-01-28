@@ -1,0 +1,50 @@
+practicals> db.secondPrac.find()
+[
+  {
+    _id: ObjectId("63d4ec8e90926348af5d0f70"),
+    name: 'Vainavi Nair',
+    age: 20,
+    gender: 'Female'
+  },
+  {
+    _id: ObjectId("63d4ec9490926348af5d0f71"),
+    name: 'Rishi Gupta',
+    age: 18,
+    gender: 'Male'
+  },
+  {
+    _id: ObjectId("63d4eca090926348af5d0f72"),
+    name: 'Riya Tiwari',
+    age: 24,
+    gender: 'Female'
+  },
+  {
+    _id: ObjectId("63d4eca090926348af5d0f73"),
+    name: 'Mike Morales',
+    age: 25
+  },
+  {
+    _id: ObjectId("63d4eca090926348af5d0f74"),
+    name: 'Rick Mathews',
+    gender: 'Male'
+  }
+]
+practicals> db.secondPrac.find({gender:"Male"},{_id:0,age:0,gender:0})
+[ { name: 'Rishi Gupta' }, { name: 'Rick Mathews' } ]
+practicals> db.secondPrac.find({gender:"Male"})
+[
+  {
+    _id: ObjectId("63d4ec9490926348af5d0f71"),
+    name: 'Rishi Gupta',
+    age: 18,
+    gender: 'Male'
+  },
+  {
+    _id: ObjectId("63d4eca090926348af5d0f74"),
+    name: 'Rick Mathews',
+    gender: 'Male'
+  }
+]
+practicals> db.secondPrac.find({age:20},{_id:0,age:0,gender:0})
+[ { name: 'Vainavi Nair' } ]
+practicals>

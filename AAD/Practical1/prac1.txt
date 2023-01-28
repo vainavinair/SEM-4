@@ -1,0 +1,158 @@
+AIM: Write a program to implement MongoDB data models.
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2023-01-27T17:35:24.529+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+------
+
+------
+   Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+   metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+   The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+   and anyone you share the URL with. MongoDB may use this information to make product
+   improvements and to suggest MongoDB products and deployment options to you.
+
+   To enable free monitoring, run the following command: db.enableFreeMonitoring()
+   To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+------
+
+test> show dbs
+admin   40.00 KiB
+config  72.00 KiB
+local   80.00 KiB
+test> use practicals
+switched to db practicals
+practicals> show collections
+
+practicals> db.createCollection("firstPrac")
+{ ok: 1 }
+practicals> db.firstPrac.insertMany([
+...     {
+...       name: 'Ashley Dawson',
+...       job: 'doctor'
+...     },
+...     {
+...       name: 'Richard Rebello',
+...       job: 'teacher',
+...       age: 30
+...     },
+...     {
+...       name: 'Shane Raymonds',
+...       job: 'accountant',
+...       age: 28
+...     },
+...     {
+...       name: 'Mike Jones',
+...       age: 22
+...     }
+...   ]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("63d400094e0928a994d42c11"),
+    '1': ObjectId("63d400094e0928a994d42c12"),
+    '2': ObjectId("63d400094e0928a994d42c13"),
+    '3': ObjectId("63d400094e0928a994d42c14")
+  }
+}
+
+practicals> db.firstPrac.find().pretty()
+[
+  {
+    _id: ObjectId("63d400094e0928a994d42c11"),
+    name: 'Ashley Dawson',
+    job: 'doctor'
+  },
+  {
+    _id: ObjectId("63d400094e0928a994d42c12"),
+    name: 'Richard Rebello',
+    job: 'teacher',
+    age: 30
+  },
+  {
+    _id: ObjectId("63d400094e0928a994d42c13"),
+    name: 'Shane Raymonds',
+    job: 'accountant',
+    age: 28
+  },
+  {
+    _id: ObjectId("63d400094e0928a994d42c14"),
+    name: 'Mike Jones',
+    age: 22
+  }
+]
+
+practicals> db.firstPrac.find({name:'Mike Jones'}).pretty()
+[
+  {
+    _id: ObjectId("63d400094e0928a994d42c14"),
+    name: 'Mike Jones',
+    age: 22
+  }
+]
+practicals> db.firstPrac.find({name:'Mike Jones'},{job:0}).pretty()
+[
+  {
+    _id: ObjectId("63d400094e0928a994d42c14"),
+    name: 'Mike Jones',
+    age: 22
+  }
+]
+
+practicals> db.firstPrac.find().pretty()
+[
+  {
+    _id: ObjectId("63d400094e0928a994d42c11"),
+    name: 'Ashley Dawson',
+    job: 'doctor'
+  },
+  {
+    _id: ObjectId("63d400094e0928a994d42c12"),
+    name: 'Richard Rebello',
+    job: 'teacher',
+    age: 30
+  },
+  {
+    _id: ObjectId("63d400094e0928a994d42c13"),
+    name: 'Shane Raymonds',
+    job: 'accountant',
+    age: 28
+  },
+  {
+    _id: ObjectId("63d400094e0928a994d42c14"),
+    name: 'Mike Jones',
+    age: 22
+  }
+]
+practicals> db.firstPrac.find({},{name:1, _id:0})
+[
+  { name: 'Ashley Dawson' },
+  { name: 'Richard Rebello' },
+  { name: 'Shane Raymonds' },
+  { name: 'Mike Jones' }
+]
+practicals> db.firstPrac.find({name:"brian"})
+
+practicals> db.firstPrac.insertOne({name:"Shane Raymonds",age:30})
+{
+  acknowledged: true,
+  insertedId: ObjectId("63d402804e0928a994d42c16")
+}
+practicals> db.firstPrac.find({name:"Shane Raymonds"}).pretty()
+[
+  {
+    _id: ObjectId("63d400094e0928a994d42c13"),
+    name: 'Shane Raymonds',
+    job: 'accountant',
+    age: 28
+  },
+  {
+    _id: ObjectId("63d402804e0928a994d42c16"),
+    name: 'Shane Raymonds',
+    age: 30
+  }
+]
+practicals>

@@ -1,0 +1,62 @@
+practicals> db.secondPrac.find()
+[
+  {
+    _id: ObjectId("63d4ec8e90926348af5d0f70"),
+    name: 'Vainavi Nair',
+    age: 21,
+    gender: 'Female'
+  },
+  {
+    _id: ObjectId("63d4ec9490926348af5d0f71"),
+    name: 'Rishi Gupta',
+    age: 21,
+    gender: 'Male'
+  },
+  {
+    _id: ObjectId("63d4eca090926348af5d0f72"),
+    name: 'Riya Tiwari',
+    age: 24,
+    gender: 'Female'
+  },
+  {
+    _id: ObjectId("63d4eca090926348af5d0f73"),
+    name: 'Mike Morales',
+    age: 25
+  },
+  { _id: ObjectId("63d4eca090926348af5d0f74"), name: 'Rick Perry' }
+]
+practicals> db.secondPrac.deleteOne({age:24})
+{ acknowledged: true, deletedCount: 1 }
+practicals> db.secondPrac.find()
+[
+  {
+    _id: ObjectId("63d4ec8e90926348af5d0f70"),
+    name: 'Vainavi Nair',
+    age: 21,
+    gender: 'Female'
+  },
+  {
+    _id: ObjectId("63d4ec9490926348af5d0f71"),
+    name: 'Rishi Gupta',
+    age: 21,
+    gender: 'Male'
+  },
+  {
+    _id: ObjectId("63d4eca090926348af5d0f73"),
+    name: 'Mike Morales',
+    age: 25
+  },
+  { _id: ObjectId("63d4eca090926348af5d0f74"), name: 'Rick Perry' }
+]
+practicals> db.secondPrac.deleteMany({age:21})
+{ acknowledged: true, deletedCount: 2 }
+practicals> db.secondPrac.find()
+[
+  {
+    _id: ObjectId("63d4eca090926348af5d0f73"),
+    name: 'Mike Morales',
+    age: 25
+  },
+  { _id: ObjectId("63d4eca090926348af5d0f74"), name: 'Rick Perry' }
+]
+practicals>
