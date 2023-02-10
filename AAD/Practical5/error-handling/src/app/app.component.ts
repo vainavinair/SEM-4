@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'error-handling';
+
+  ngOnInit(){
+    //throws a error on initialization
+    throw new Error("This error is meant to handled by the error handler service.")
+  }
+
 }
