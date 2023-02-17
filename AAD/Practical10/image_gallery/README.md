@@ -1,6 +1,6 @@
 # Aim
 ```
-Create an app using Flutter for User Authentication
+Create an app using Flutter to implement an Image Gallery
 ```
 
 # Getting Started
