@@ -1,16 +1,32 @@
-# user_auth
+# Getting Started
 
-A new Flutter project.
+### Download Dart SDK
+download the dart SDK <br/>
+https://dart.dev/get-dart/archive <br/>
+Add the bin directory of the Dart SDK to your system's PATH environment variable. 
 
-## Getting Started
+### Download Flutter SDK
+download the Flutter SDK <br/>
+https://docs.flutter.dev/get-started/install<br/>
+Add the bin directory of the Flutter SDK to your system's PATH environment variable. 
 
-This project is a starting point for a Flutter application.
+### Setting up VS Code
+Insatll Flutter(by Dart Code) extention
 
-A few resources to get you started if this is your first Flutter project:
+### Create A Project 
+Run this command on terminal<br/>
+``` flutter create project_name```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Running a project
+**Connect Phone**<br/>
+make sure USB debugging is enabled in Developer options<br/>
+>
+**OR**<br/>
+>
+**Create Virtural Devices Using Android Studio**<br/>
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Lastly, run main.dart without debugging
+
+
+
+
