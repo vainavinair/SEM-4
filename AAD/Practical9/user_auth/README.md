@@ -25,7 +25,7 @@ make sure USB debugging is enabled in Developer options<br/>
 >
 **Create Virtural Devices Using Android Studio**<br/>
 
-Lastly, run main.dart without debugging
+ Lastly, run main.dart without debugging or ```flutter run <dart.file>```
 
 
 
