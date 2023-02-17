@@ -11,7 +11,7 @@ https://docs.flutter.dev/get-started/install<br/>
 Add the bin directory of the Flutter SDK to your system's PATH environment variable. 
 
 ### Setting up VS Code
-Insatll Flutter(by Dart Code) extention
+Insatll Flutter(by Dart Code) extension
 
 ### Create A Project 
 Run this command on terminal<br/>
