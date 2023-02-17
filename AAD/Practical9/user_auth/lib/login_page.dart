@@ -58,6 +58,7 @@ class LoginPage extends StatelessWidget {
                   if (value!.isEmpty) {
                     return "Email cannot be empty";
                   }
+                  return null;
                 },
               ),
               SizedBox(
@@ -78,6 +79,7 @@ class LoginPage extends StatelessWidget {
                   if (value!.isEmpty) {
                     return "Password cannot be empty";
                   }
+                  return null;
                 },
               ),
               SizedBox(
