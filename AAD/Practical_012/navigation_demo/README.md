@@ -1,16 +1,37 @@
-# navigation_demo
+# Aim
+```
+Create an app using Flutter to implement an Image Gallery
+```
 
-A new Flutter project.
+# Getting Started
 
-## Getting Started
+### Download Dart SDK
+download the dart SDK <br/>
+https://dart.dev/get-dart/archive <br/>
+Add the bin directory of the Dart SDK to your system's PATH environment variable. 
 
-This project is a starting point for a Flutter application.
+### Download Flutter SDK
+download the Flutter SDK <br/>
+https://docs.flutter.dev/get-started/install<br/>
+Add the bin directory of the Flutter SDK to your system's PATH environment variable. 
 
-A few resources to get you started if this is your first Flutter project:
+### Setting up VS Code
+Insatll Flutter(by Dart Code) extension
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Create A Project 
+Run this command on terminal<br/>
+``` flutter create project_name```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Running a project
+**Connect Phone**<br/>
+make sure USB debugging is enabled in Developer options<br/>
+>
+**OR**<br/>
+>
+**Create Virtural Devices Using Android Studio**<br/>
+
+ Lastly, run main.dart without debugging or ```flutter run <dart.file>```
+
+
+
+
