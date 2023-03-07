@@ -22,7 +22,7 @@ class MultiChild extends StatelessWidget {
             margin: EdgeInsets.all(4),
             decoration: BoxDecoration(
                 border: Border.all(color: Colors.green, width: 2)),
-            height: 300, // set a fixed height for the ListView
+            height: 300,
             child: ListView.builder(
               itemCount: 10,
               itemBuilder: (BuildContext context, int index) {
@@ -45,7 +45,7 @@ class MultiChild extends StatelessWidget {
             margin: EdgeInsets.all(4),
             decoration: BoxDecoration(
                 border: Border.all(color: Colors.green, width: 2)),
-            height: 300, // set a fixed height for the ListView
+            height: 300,
             child: GridView.builder(
               gridDelegate:
                   SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
