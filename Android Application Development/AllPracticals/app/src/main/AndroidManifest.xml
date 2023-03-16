@@ -11,6 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AllPracticals"
         tools:targetApi="31">
+        <activity android:name=".MenusDemo"></activity>
         <activity android:name=".MediaPlayerPrac"></activity>
         <activity android:name=".IntentDemo"></activity>
         <activity android:name=".ActivtiyLifeCycle"></activity>

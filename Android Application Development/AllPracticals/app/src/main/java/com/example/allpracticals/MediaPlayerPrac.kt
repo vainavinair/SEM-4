@@ -1,5 +1,6 @@
 package com.example.allpracticals
 
+import android.content.Intent
 import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -30,7 +31,10 @@ class MediaPlayerPrac:AppCompatActivity() {
             mediaPlayer.stop()
             mediaPlayer.prepare()
         }
-        btn_next.setOnClickListener {  }
+        btn_next.setOnClickListener {
+            val intent= Intent(this,MenusDemo::class.java)
+            startActivity(intent)
+        }
     }
 
 }
